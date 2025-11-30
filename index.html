@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Socialprodz - Digital Store</title>
+<style>
+body{font-family:sans-serif;background:#f7f7f7;margin:0;padding:0;color:#222;transition:0.3s;}
+header{text-align:center;padding:60px 20px;}
+h1{font-size:32px;margin-bottom:10px;}
+p{font-size:18px;max-width:600px;margin:auto;}
+.section{padding:40px 20px;text-align:center;}
+.btn{display:inline-block;padding:14px 24px;margin:10px;background:#4a6cff;color:#fff;text-decoration:none;border-radius:8px;font-size:18px;}
+.lang-btn{position:fixed;top:20px;right:20px;background:#fff;border:1px solid #ccc;padding:8px 14px;border-radius:6px;cursor:pointer;}
+footer{text-align:center;padding:20px;font-size:14px;color:#555;}
+</style>
+</head>
+<body>
+
+<button class="lang-btn" onclick="toggleLang()">AR / EN</button>
+
+<header>
+<h1 id="title">Socialprodz - Digital Store</h1>
+<p id="subtitle">Everything you need to start your digital business — templates, prompts, eBooks, and much more.</p>
+</header>
+
+<div class="section">
+<h2 id="productsTitle">Our Products</h2>
+<a class="btn" id="shopifyBtn" href="https://payhip.com/b/XxJF1" target="_blank">Shopify Themes +250</a>
+<a class="btn" id="promptBtn" href="https://payhip.com/b/ufzvS" target="_blank">ChatGPT Prompts +170</a>
+</div>
+
+<footer id="footer">© 2025 Socialprodz</footer>
+
+<script>
+let ar = false;
+
+function toggleLang(){
+    ar = !ar;
+    if(ar){
+        document.body.dir="rtl";
+        document.body.lang="ar";
+        document.getElementById("title").innerText="Socialprodz - متجر المنتجات الرقمية";
+        document.getElementById("subtitle").innerText="كل ما تحتاجه لبدء مشروعك الرقمي — قوالب، برومبات، كتب والمزيد.";
+        document.getElementById("productsTitle").innerText="منتجاتنا";
+        document.getElementById("shopifyBtn").innerText="قوالب Shopify +250";
+        document.getElementById("promptBtn").innerText="برومبات ChatGPT +170";
+        document.getElementById("footer").innerText="© 2025 Socialprodz";
+    } else {
+        document.body.dir="ltr";
+        document.body.lang="en";
+        document.getElementById("title").innerText="Socialprodz - Digital Store";
+        document.getElementById("subtitle").innerText="Everything you need to start your digital business — templates, prompts, eBooks, and much more.";
+        document.getElementById("productsTitle").innerText="Our Products";
+        document.getElementById("shopifyBtn").innerText="Shopify Themes +250";
+        document.getElementById("promptBtn").innerText="ChatGPT Prompts +170";
+        document.getElementById("footer").innerText="© 2025 Socialprodz";
+    }
+}
+</script>
+
+</body>
+</html>
