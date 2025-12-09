@@ -1,63 +1,126 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Socialprodz - Digital Store</title>
-<style>
-body{font-family:sans-serif;background:#f7f7f7;margin:0;padding:0;color:#222;transition:0.3s;}
-header{text-align:center;padding:60px 20px;}
-h1{font-size:32px;margin-bottom:10px;}
-p{font-size:18px;max-width:600px;margin:auto;}
-.section{padding:40px 20px;text-align:center;}
-.btn{display:inline-block;padding:14px 24px;margin:10px;background:#4a6cff;color:#fff;text-decoration:none;border-radius:8px;font-size:18px;}
-.lang-btn{position:fixed;top:20px;right:20px;background:#fff;border:1px solid #ccc;padding:8px 14px;border-radius:6px;cursor:pointer;}
-footer{text-align:center;padding:20px;font-size:14px;color:#555;}
-</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>25-in-1 eCom Business Starter Bundle</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7fa;
+            color: #222;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: white;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .lang-btn {
+            padding: 8px 15px;
+            background: #0077ff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .desc {
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .payhip-box {
+            margin-top: 40px;
+            border: 2px solid #0077ff;
+            border-radius: 12px;
+            padding: 20px;
+            background: #f0f6ff;
+        }
+    </style>
+
+    <script>
+        function toggleLanguage() {
+            const en = document.getElementById("en");
+            const ar = document.getElementById("ar");
+
+            if (en.style.display === "none") {
+                en.style.display = "block";
+                ar.style.display = "none";
+            } else {
+                en.style.display = "none";
+                ar.style.display = "block";
+            }
+        }
+    </script>
+
 </head>
+
 <body>
 
-<button class="lang-btn" onclick="toggleLang()">AR / EN</button>
-
 <header>
-<h1 id="title">Socialprodz - Digital Store</h1>
-<p id="subtitle">Everything you need to start your digital business — templates, prompts, eBooks, and much more.</p>
+    <h2>WOLF eCom</h2>
+    <button class="lang-btn" onclick="toggleLanguage()">EN / AR</button>
 </header>
 
-<div class="section">
-<h2 id="productsTitle">Our Products</h2>
-<a class="btn" id="shopifyBtn" href="https://payhip.com/b/XxJF1" target="_blank">Shopify Themes +250</a>
-<a class="btn" id="promptBtn" href="https://payhip.com/b/ufzvS" target="_blank">ChatGPT Prompts +170</a>
+<div class="container">
+
+    <!-- 🔵 English Section -->
+    <div id="en">
+        <h1>25-in-1 eCom Business Starter Bundle (AI Prompts + Shopify Theme + 500 Descriptions)</h1>
+        <p class="desc">
+            Your All-In-One Toolkit to Build, Grow & Automate Your Online Business.<br><br>
+            Are you launching a Shopify store? Creating digital products?<br>
+            Or trying to build a new income stream online?<br><br>
+            This bundle gives you everything you need to launch FAST — even if you’re starting from zero.
+        </p>
+
+        <div class="payhip-box">
+            <div class="payhip-embed-page" data-key="gMQsE"></div>
+            <script src="https://payhip.com/embed-page.js"></script>
+        </div>
+    </div>
+
+    <!-- 🔵 Arabic Section -->
+    <div id="ar" style="display:none; direction: rtl; text-align: right;">
+        <h1>باقة 25 أداة لبداية مشروع eCom (برومبتات + ثيم شوبيفاي + 500 وصف)</h1>
+        <p class="desc">
+            مجموعة شاملة لإطلاق وتطوير وأتمتة عملك الإلكتروني.<br><br>
+            هل تطلق متجر شوبيفاي؟ أو تنشئ منتجات رقمية؟<br>
+            أو تريد بدء مصدر دخل جديد بسرعة؟<br><br>
+            هذه الباقة تمنحك كل ما تحتاجه للانطلاق فورًا — حتى لو كنت مبتدئًا.
+        </p>
+
+        <div class="payhip-box">
+            <div class="payhip-embed-page" data-key="gMQsE"></div>
+            <script src="https://payhip.com/embed-page.js"></script>
+        </div>
+    </div>
+
 </div>
-
-<footer id="footer">© 2025 Socialprodz</footer>
-
-<script>
-let ar = false;
-
-function toggleLang(){
-    ar = !ar;
-    if(ar){
-        document.body.dir="rtl";
-        document.body.lang="ar";
-        document.getElementById("title").innerText="Socialprodz - متجر المنتجات الرقمية";
-        document.getElementById("subtitle").innerText="كل ما تحتاجه لبدء مشروعك الرقمي — قوالب، برومبات، كتب والمزيد.";
-        document.getElementById("productsTitle").innerText="منتجاتنا";
-        document.getElementById("shopifyBtn").innerText="قوالب Shopify +250";
-        document.getElementById("promptBtn").innerText="برومبات ChatGPT +170";
-        document.getElementById("footer").innerText="© 2025 Socialprodz";
-    } else {
-        document.body.dir="ltr";
-        document.body.lang="en";
-        document.getElementById("title").innerText="Socialprodz - Digital Store";
-        document.getElementById("subtitle").innerText="Everything you need to start your digital business — templates, prompts, eBooks, and much more.";
-        document.getElementById("productsTitle").innerText="Our Products";
-        document.getElementById("shopifyBtn").innerText="Shopify Themes +250";
-        document.getElementById("promptBtn").innerText="ChatGPT Prompts +170";
-        document.getElementById("footer").innerText="© 2025 Socialprodz";
-    }
-}
-</script>
 
 </body>
 </html>
